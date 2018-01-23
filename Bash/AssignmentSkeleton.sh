@@ -22,7 +22,7 @@ else
     read id
     echo "\documentclass[12pt]{article}
 \usepackage[margin=1 in,headheight=20pt]{geometry}
-\usepackage{fancyhdr, setspace, amsmath, amsthm, amssymb, tabularx}
+\usepackage{fancyhdr, setspace, amsmath, amsthm, amssymb, tabularx, collectbox}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{tikz}
 \usetikzlibrary{positioning,chains,fit,shapes,calc,arrows.meta,matrix}
