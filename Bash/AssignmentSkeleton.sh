@@ -45,6 +45,10 @@ else
 	\fbox{\BOXCONTENT}%
 	}%
 }
+%New command \numberthis to number a line in an unnumbered equation
+%environment like align*
+\newcommand\numberthis{\stepcounter{equation}\tag{\theequation}}
+
 \pagestyle{fancy}
 \lhead{$cc}
 \chead{$title}
