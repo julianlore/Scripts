@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+if [ $# -lt 1 ]
+then
+	echo "Not enough arguments"
+	echo "Example usage: gi file_to_ignore"
+else
+	git_dir=`git rev-parse --show-toplevel`
+	file_dir="$(dirname "$1")"
+	if [ "$file_dir" == "." ]
+	then
+		file="$(basename "$1")"
+	else
+		file="$file_dir/$(basename "$1")"
+	fi
+	# Absolute path of file
+	file="$PWD/$file"
+	# git_dir with / replaced by \/
+	git_dir_esc=`echo "$git_dir" | sed -e 's/\//\\\\\//g'`
+	# Path of file relative to *git_dir*
+	file=`echo "$file" | sed -e 's/'"$git_dir_esc"'\///g'`
+	echo "$file" >> "$git_dir/.gitignore"
+fi
