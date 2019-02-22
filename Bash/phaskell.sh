@@ -5,6 +5,7 @@ then
     echo "Not enough arguments"
     echo "Example usage: phaskell.sh filename"
 else
+    hlint --refactor --refactor-options="--inplace" $1
     hindent $1
     stylish-haskell -i $1
 fi
