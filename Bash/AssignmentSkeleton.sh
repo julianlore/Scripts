@@ -30,14 +30,14 @@ else
 \allowdisplaybreaks
 
 \theoremstyle{definition}
-\newtheorem{problem}{Problem} 
-	 
-\theoremstyle{definition} 
-\newtheorem*{solution}{Solution} 
+\newtheorem{problem}{Problem}
+
+\theoremstyle{definition}
+\newtheorem*{solution}{Solution}
 
 \theoremstyle{theorem}
 \newtheorem*{lemm}{Lemma}
-	 
+
 %New command \mybox to box something
 \newcommand{\mybox}{%
 \collectbox{%
@@ -53,10 +53,10 @@ else
 \lhead{$cc}
 \chead{$title}
 \rhead{\today
-	\\\\ID: $id
+	\\\\ID:\@$id
 	\\\\ $name}
-\cfoot{Page \thepage \ of \pageref{LastPage}}
+\cfoot{Page \thepage~of~\pageref{LastPage}}
 \begin{document}
-\onehalfspacing
+\onehalfspacing%
 \end{document}" >> "$file"
 fi
