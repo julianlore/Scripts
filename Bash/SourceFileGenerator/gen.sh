@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
-if [ $# -lt 2 ]
+template_dir="`dirname "$0"`/Template"
+if [ ${1^^} == "MAKE" ]
+then
+    cp "$template_dir/Makefile" Makefile
+elif [ $# -lt 2 ]
 then
     echo "Not enough arguments"
     echo "Usage: gen.sh lang source_file_name"
     echo "Example: gen.sh bash new_script.sh"
 else
-    template_dir="`dirname "$0"`/Template"
     case ${1^^} in
 	"BASH")
 	    cp "$template_dir/script.sh" $2
