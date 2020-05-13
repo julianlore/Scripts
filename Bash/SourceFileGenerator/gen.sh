@@ -16,6 +16,9 @@ else
 	"BASH_ARG")
 	    cp "$template_dir/script_arg.sh" $2
 	    ;;
+	"BASH_CASE")
+	    cp "$template_dir/script_case.sh" $2
+	    ;;
 	"MAKE")
 	    cp "$template_dir/Makefile" $2
 	    ;;
